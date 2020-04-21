@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "489585003983",
+    "firebase_url": "https://tracecovidsenegal.firebaseio.com",
+    "project_id": "tracecovidsenegal",
+    "storage_bucket": "tracecovidsenegal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489585003983:android:f3c98a59aeb570ccdf96ba",
+        "android_client_info": {
+          "package_name": "com.tracecovidsenegal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489585003983-mitbd3f1el7qoi3e41n8bp15ghvov93h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tracecovidsenegal",
+            "certificate_hash": "23f973f38b645b04d1c7d3393c9af05ba99e608a"
+          }
+        },
+        {
+          "client_id": "489585003983-pl9jn2bl5u8k6uevmor8j1k26mgv71v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV2IXTTeupdn5TpoaQpw8Nb0tp7qf6miM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489585003983-pl9jn2bl5u8k6uevmor8j1k26mgv71v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
