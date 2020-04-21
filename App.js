@@ -7,108 +7,58 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-const App: () => React$Node = () => {
+import { View } from 'react-native';
+const App = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+    <View>
+    {/* 
+    Splash Screen While Loading Components 
+    With Explanations and Next Button 
+    This Screen will have some explanations about the 
+    app to distract the user while the app is 
+    loading on background
+    Once the loading is complete, the Next Button becomes enabled  
 
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+    First Connexion 
+      Ask for PERMISSIONS 
+        * bluetooth activation permission
+        * running on background permission
+        If accept
+          Active bluetooth
+          Active Background Task Running
+          Show Login View
+        Else 
+          Quit with message 
 
+    Authentication on First Connexion with permissions
+      Show input, user is prompted to enter his phone number
+      Send a one-time code and Verify validity
+      Create a new user instance on Firebase (User: uniqueID, phoneNumber, createdAt)
+      Generate a daily temp ID from uniqueID
+      Send back to user (tempID, createdAt, expiresAt)
+      Save locally on asyncStorage
+
+    On every App Opening 
+      Main View | Alert View | Help View | ..
+    
+    On Background 
+      Periodic Blutooth Advertisement
+      Periodic Bluetooth Scan
+      If a device is found 
+        Get Device's tempID    
+      
+    Every Day 
+      Generate a new tempID from uniqueID
+    
+    If declared positive
+      Receive message from Health Authority
+      Prompted to share our contact list with contenment
+      Publish Contact List
+      Broadcast Message to every contact from saved phone numbers
+      Broadcast Message to every contact of contacts from saved phone numbers
+      Create a groupe of peopleToQuarantine
+    */}
+    </View>
+  )
+}
 export default App;
